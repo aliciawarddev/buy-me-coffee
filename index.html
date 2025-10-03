@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Me a Coffee ☕</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="header">
+                <h1>☕ Buy Me a Coffee</h1>
+                <p class="tagline">Support my work with a virtual coffee!</p>
+            </div>
+
+            <div class="coffee-options">
+                <button class="coffee-btn" data-amount="300">
+                    <span class="emoji">☕</span>
+                    <span class="label">Small Coffee</span>
+                    <span class="price">$3</span>
+                </button>
+
+                <button class="coffee-btn" data-amount="500">
+                    <span class="emoji">☕☕</span>
+                    <span class="label">Medium Coffee</span>
+                    <span class="price">$5</span>
+                </button>
+
+                <button class="coffee-btn" data-amount="1000">
+                    <span class="emoji">☕☕☕</span>
+                    <span class="label">Large Coffee</span>
+                    <span class="price">$10</span>
+                </button>
+            </div>
+
+            <div class="footer">
+                <p>Secure payment powered by Stripe</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="script.js"></script>
+</body>
+</html>
