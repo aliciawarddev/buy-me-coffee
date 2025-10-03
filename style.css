@@ -1,3 +1,22 @@
+:root {
+    /* MCM Color Palette inspired by coffee emoji */
+    --coffee-brown: #6F4E37;
+    --coffee-dark: #3E2723;
+    --coffee-medium: #8B6F47;
+    --cream: #F5E6D3;
+    --warm-white: #FAF7F2;
+    --steam-gray: #E0DED9;
+    --accent-orange: #D4793B;
+    --accent-teal: #4A9B9B;
+    --accent-mustard: #D4A650;
+    
+    /* Shadows and effects */
+    --shadow-subtle: 0 4px 6px rgba(62, 39, 35, 0.1);
+    --shadow-hover: 0 8px 16px rgba(62, 39, 35, 0.15);
+}
+
+/* GENERAL STYLING */
+
 * {
     margin: 0;
     padding: 0;
@@ -5,8 +24,8 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, var(--accent-teal) 0%, var(--accent-mustard) 100%);
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -19,27 +38,37 @@ body {
     max-width: 500px;
 }
 
+/* CARD */
 .card {
-    background: white;
-    border-radius: 20px;
+    background: var(--warm-white);
+    border-radius: 8px;
     padding: 40px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    box-shadow: var(--shadow-hover);
+    border: 3px solid var(--coffee-dark);
 }
 
+/* HEADER */
 .header {
     text-align: center;
     margin-bottom: 40px;
+    border-bottom: 2px solid var(--coffee-medium);
+    padding-bottom: 20px;
 }
 
 .header h1 {
+    font-family: 'Oswald', sans-serif;
     font-size: 2.5rem;
-    color: #333;
+    color: var(--coffee-dark);
     margin-bottom: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .tagline {
-    color: #666;
+    color: var(--coffee-brown);
     font-size: 1.1rem;
+    font-weight: 500;
 }
 
 .coffee-options {
@@ -49,57 +78,95 @@ body {
     margin-bottom: 30px;
 }
 
+/* BUTTONS - STYLING */
 .coffee-btn {
-    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-    border: none;
-    border-radius: 12px;
-    padding: 20px;
+    background: var(--coffee-brown);
+    border: 3px solid var(--coffee-dark);
+    border-radius: 4px;
+    padding: 24px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
-    color: white;
-    font-size: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    color: var(--cream);
+    font-family: 'Inter', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    box-shadow: 4px 4px 0 var(--coffee-dark);
+    position: relative;
+    overflow: hidden;
 }
 
-.coffee-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(245, 87, 108, 0.4);
-}
-
-.coffee-btn:active {
-    transform: translateY(0);
-}
-
-.coffee-btn .emoji {
-    font-size: 1.5rem;
-}
-
+/* BUTTONS - LABEL */
 .coffee-btn .label {
     flex-grow: 1;
     text-align: left;
     margin-left: 15px;
-    font-weight: 600;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 0.95rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
+/* BUTTONS - PRICE */
 .coffee-btn .price {
-    font-size: 1.3rem;
-    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: var(--warm-white);
+    color: var(--coffee-dark);
+    padding: 8px 18px;
+    border-radius: 3px;
+    border: 2px solid var(--coffee-dark);
+    box-shadow: 2px 2px 0 var(--coffee-dark);
 }
 
+/* BUTTONS - COLORS */
+.coffee-btn:nth-child(1) {
+    background: var(--coffee-medium);
+}
+
+.coffee-btn:nth-child(2) {
+    background: var(--coffee-brown);
+}
+
+.coffee-btn:nth-child(3) {
+    background: var(--coffee-dark);
+}
+
+/* BUTTONS - INTERACTIVE STATES */
+.coffee-btn:hover {
+    background: var(--accent-teal);
+    transform: translateY(-3px);
+    box-shadow: 6px 6px 0 var(--coffee-dark);
+    border-color: var(--coffee-dark);
+}
+
+.coffee-btn:hover .price {
+    background: var(--accent-mustard);
+    transform: scale(1.05);
+}
+
+.coffee-btn:active {
+    transform: translateY(-1px);
+}
+
+/* FOOTER */
 .footer {
     text-align: center;
     padding-top: 20px;
-    border-top: 1px solid #eee;
+    border-top: 2px solid var(--steam-gray);
 }
 
 .footer p {
-    color: #999;
+    color: var(--coffee-medium);
     font-size: 0.9rem;
+    font-weight: 500;
 }
 
-/* Mobile responsiveness */
+/* MOBILE RESPONSIVENESS */
 @media (max-width: 480px) {
     .card {
         padding: 30px 20px;
