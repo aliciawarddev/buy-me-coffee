@@ -1,8 +1,8 @@
 // Stripe payment links
 const PAYMENT_LINKS = {
-    '300': 'https://buy.stripe.com/test_fZueVc3MHew4bntcpG9MY01',
-    '500': 'https://buy.stripe.com/test_dRm6oG5UPds03V1fBS9MY02', 
-    '1000': 'https://buy.stripe.com/test_00w28q82X9bK4Z5dtK9MY03'
+    '300': 'https://buy.stripe.com/8x2eVc4ITfJ33yS0Vi6Na00',
+    '500': 'https://buy.stripe.com/cNifZg8Z91SdedweM86Na01', 
+    '1000': 'https://buy.stripe.com/28E00ifnx0O96L4eM86Na02'
 };
 
 // Get all coffee buttons
